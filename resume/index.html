@@ -38,7 +38,7 @@
   <div class = "banner">
     <div class="mask"></div>
   </div>
-  <main>
+  <main style="">
     <div class = "userCard">
       <div class = "pictureAndText clearfix">
         <div class = "picture">
@@ -80,39 +80,93 @@
           </svg>
         </a>
       </footer>
-    </div> 
-    <a class = "button" href="#">下载简历</a>
-    <p>
-      我是一名前端开发工程师，我拥有html，css，javascript,es6,会使用vue.js框架,
-      有一些深入的了解，同时会使用react，掌握node.js开发环境。
-    </p>
-    <section class = "proSkill">
-      <h2>技能</h2>
-      <ol>
-        <li>HTML5 & CSS 3</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Vue</li>
-        <li>React</li>
-        <li>HTTP</li>
-      </ol>
-    </section>
-    <section class = "Protfolio">
-      <h2>作品集</h2>
-      <nav>
-        <ol>
-          <li>所有</li>
-          <li>框架</li>
-          <li>原生JS&CSS</li>
-        </ol>
-      </nav>
-    </section>
-    <div class = "jobs">
-      <div class = "Big"></div>
-      <div class = "small"></div>
-      <div class = "small"></div>
     </div>
+    <p class = "downloadResume-wripper">
+      <a class = "downloadResume" href="./resume.pdf" target="_blank" download>
+        下载简历
+      </a>
+    </p> 
+    <p class = "selfIntrodution">
+      方圆,前端开发工程师,拥有html,css,javascript,es6
+      <br>会使用vue.js框架,同时会使用react,掌握node.js开发环境
+    </p>
   </main>
-  <div class="lines" style="line-height: "><span>123</span></div>
+  <section class = "skills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>HTML5 & CSS3</h3>
+        <div class = "progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+      <li>
+        <h3>Javascript</h3>
+        <div class = "progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+      <li> 
+        <h3>jQuery</h3>
+        <div class = "progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+      <li> 
+        <h3>Vue.js</h3>
+        <div class = "progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+      <li> 
+        <h3>React.js</h3>
+        <div class = "progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+      <li> 
+        <h3>Node.js</h3>
+        <div class = "progressBar">
+          <div class="progress"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section class = "protfolio">
+    <h2>作品集</h2>
+    <nav>
+      <ol class = "clearfix">
+        <li id = "protfolio1">所有</li>
+        <li id = "protfolio2">框架</li>
+        <li id = "protfolio3">原生JS&CSS</li>
+      </ol>
+      <div id = "protfolioBar" class="bar state-1">
+        <div class="bar-inner">
+        </div>
+      </div>
+    </nav>
+    <script>
+      protfolio1.onclick= function() {
+        protfolioBar.className = 'bar state-1';
+      }
+      protfolio2.onclick= function() {
+        protfolioBar.className = 'bar state-2';
+      }
+      protfolio3.onclick= function() {
+        protfolioBar.className = 'bar state-3';
+      }
+    </script>
+  <div class = "works" style="height: 597px;">
+    <div class = "big" style="top: 0; left: 0;">
+      <img src="./img/1.jpg" alt="protfolio1">
+    </div>
+    <div class = "small" style="top:0; left: 644px;">
+      <img src="./img/2.jpg" alt="protfolio2">
+    </div>
+    <div class = "small" style="top:297px; left: 644px;">
+      <img src="./img/3.jpg" alt="protfolio3">
+    </div>
+  </div>
+  </section>
 </body>
 </html>
