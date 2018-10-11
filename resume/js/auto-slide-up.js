@@ -1,3 +1,4 @@
+!function () {
   //添加offset类
   let specialTags = document.querySelectorAll('[data-x]')
   for (let i = 0; i < specialTags.length; i++) {
@@ -5,10 +6,10 @@
   }
 
   findClosestAndRemoveOffset()
-  window.addEventListener('scroll',function (x) {
+  window.addEventListener('scroll', function (x) {
     findClosestAndRemoveOffset()
-  })  
-//helper
+  })
+  //helper
   function findClosestAndRemoveOffset() {
     let specialTags = document.querySelectorAll('[data-x]')
     let minIndex = 0
@@ -28,3 +29,4 @@
     }
     li.classList.add('highlight')
   }
+}.call()
