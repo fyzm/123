@@ -1,7 +1,5 @@
 !function () {
   var view = document.querySelector('nav.menu')
- 
-
   var controller = {
     view:null,
     aTags:null,
@@ -37,12 +35,12 @@
     bindEvents:function(){
       let aTags = this.view.querySelectorAll('nav.menu > ul > li > a')
       for (let i = 0; i < aTags.length; i++) {
-        aTags[i].onclick = function (x) {
+        aTags[i].onclick = (x)=> {
           x.preventDefault()
           let a = x.currentTarget
           let href = a.getAttribute('href')
           let element = document.querySelector(href)
-         
+          this.scrollToElement(element)
   
         }
       }
