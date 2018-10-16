@@ -1,12 +1,13 @@
 !function () {
   var model = Model({resourceName:'Message'})
-  
+
   var view = View('section.message')
   var controller = Controller({
+    messageList:null,
+    form:null,
     init:function(view,controller){
       this.messageList = view.querySelector('#messageList')
       this.form = view.querySelector('form')
-      this.model.init()
       this.loadMessages()
     },
     loadMessages:function(){
@@ -22,7 +23,9 @@
       )
     },
     bindEvents:function(){
-      this.form.addEventListener('submit', function (e) {
+      console.log(this.form)
+      //function(e)换成(e)=>,啥原因
+      this.form.addEventListener('submit', (e)=>{
         e.preventDefault()
         this.saveMessage()
       })
