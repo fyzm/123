@@ -24,29 +24,29 @@ hr{height: 0;border: none;border: 1px solid #DEDEDE}
 .clearfix::after{content: '';display: block;clear: both;}
 .topNavBar{padding: 29px 0px 21px 0px;position: fixed;top: 0px;left: 0px;width: 100%;transition: all 0.5s;color: #C2C4C7}
 .topNavBar.sticky{background:white;padding:10px 0;z-index: 9999;box-shadow: 0 0 10px rgba(0,0,0,0.25);color:#3d4451}
-.topNavBar-inner{padding: 0px 16px;}
+.topNavBar-inner{padding: 0px 16px;display: flex;align-items: center;flex-direction: column}
 .topNavBar nav{padding-top: 4px;padding-bottom: 4px;}
 .topNavBar nav>ul{list-style: none; margin: 0;padding: 0;}
 .topNavBar nav>ul>li{float:left;margin-left: 17px;margin-right: 17px;position:relative;}
 .topNavBar nav>ul>li>a{font-size: 12px;color:inherit;font-weight: bold;border-top: 3px solid transparent;border-bottom: 3px solid transparent;padding-top:7px;padding-bottom: 9px;display: block;position: relative  }
 .topNavBar nav>ul>li.active>a::after,
-.topNavBar nav>ul>li.highlight>a::after{content:'';display: ruby;position:absolute;top:100%;left:0;width:100%;background:#E8676B;height:3px;animation: menuSlide 0.3s;}
+.topNavBar nav>ul>li.highlight>a::after{content:'';display: ruby;position:absolute;top:100%;left:0;width:100%;background:#1A77D4;height:3px;animation: menuSlide 0.3s;}
 @keyframes menuSlide{0%{width:0;}100%{width:100%;}}
 .topNavBar .submenu{display: none;position:absolute;right:0;top:100%;background:white;color:#3d4451;}
 .topNavBar li.active> .submenu{display: block;animation: submenuSlide 0.3s;}
 @keyframes submenuSlide{0%{margin-right: 100%;}100%{margin-right:0%;}}
 .topNavBar .submenu>li{white-space: nowrap;padding:5px 10px;}
 .topNavBar .logo{font-size: 24px;font-family:"Arial Black";padding-top: 3px;padding-bottom: 4px;}
-.topNavBar .logo .rs{margin-right: 5px;color: #E8676B}
+.topNavBar .logo .rs{margin-right: 5px;color: #1A77D4}
 .topNavBar .logo .card{color:#9A9DA2}
 .banner{background-image:  url(./img/car-cover.jpg);height: 515px;background-position: center center;background-size: cover;}
 .banner .mask{height: 515px;background-color:rgba(0,0,0,0.7);}
 .userCard{max-width:940px;margin-right: auto;margin-left: auto;background: #FFFFFF;box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2);}
-.userCard .welcome{background: #E8676B;color: white;display: inline-block;padding: 4px 15px;position: relative;margin-bottom: 10px;}
-.userCard .welcome .triangle{display: block;border: 10px solid transparent;width:0px;border-left-color:#E8676B;border-top-width:0px;top:100%;left:4px;position: absolute;}
+.userCard .welcome{background: #1A77D4;color: white;display: inline-block;padding: 4px 15px;position: relative;margin-bottom: 10px;}
+.userCard .welcome .triangle{display: block;border: 10px solid transparent;width:0px;border-left-color:#1A77D4;border-top-width:0px;top:100%;left:4px;}
 .userCard .picture{float: left;}
-.userCard .text{float: left;margin-left:65px;width: 470px;}
-.userCard .pictureAndText{padding:50px; }
+.userCard .text{float:right;margin-left:65px;width: 470px;}
+.userCard .pictureAndText{padding-top:30px;padding-bottom:50px}
 .userCard .text h2{margin-top: 18px;}
 .userCard .text p{margin-top: 10px;}
 .userCard .text hr{margin: 20px 0;}
@@ -54,15 +54,14 @@ hr{height: 0;border: none;border: 1px solid #DEDEDE}
 .userCard dl dd{float: left;padding: 7px 0;}
 .userCard dl dt{width: 30%;font-weight: bold;}
 .userCard dl dd{width: 70%;color:#9da0a7}
-.userCard >footer.media{background: #E8676B;text-align: center;}
+.userCard >footer.media{background: #1A77D4;text-align: center;}
 .userCard > footer.media >a{display: inline-block;width: 40px;line-height: 30px;padding: 5px 0;border-radius: 50%;margin: 16px;}
 .userCard > footer.media >a:hover{background: #CF5D5F}
 .userCard svg{width: 30px;height: 30px;fill:white;vertical-align: top;}
 body>main{margin-top: -340px;}
-body>main .downloadResume-wripper{text-align: center;}
-body>main .downloadResume{font-size: 15px;border: 1px solid #CDCFD1;background: #EFEFEF;line-height: 16px;padding: 21px 70px;display: inline-block;color: #535A65;font-weight: bold;margin: 36px 0;transition: box-shadow 0.2s;}
+body>main .downloadResume-wripper{text-align:right;margin-top:10px;margin-right: 20px;}
+body>main .downloadResume{border-radius: 10px;font-size: 15px;border: 1px solid #CDCFD1;background: #EFEFEF;line-height: 16px;padding: 10px 10px;display: inline-block;color: #535A65;font-weight: bold;transition: box-shadow 0.2s;}
 body>main .downloadResume:hover{box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.2);}
-.selfIntrodution{max-width:940px;margin-right: auto;margin-left: auto;text-align: center;font-size: 18px;line-height: 1.8;margin-top:-8px;}
 section.skills,
 section.protfolio{max-width: 940px;margin-right: auto;margin-left: auto;}
 section.skills >h2{text-align: center;font-size: 34px;line-height: 1.2;font-weight:600;color:#3d4451;margin-top: 60px;}
@@ -74,7 +73,7 @@ section.skills >ol >li{float: left;width: 48%;box-sizing:border-box;}
 section.skills >ol >li:nth-child(even){float:right;}
 section.skills .progressBar{height: 5px;background: #FAE1E1;
   border-radius: 2px;margin: 4px 0px 40px;overflow: hidden;}
-section.skills .progressBar>.progress{height:100%;background:#E8676B;
+section.skills .progressBar>.progress{height:100%;background:#1A77D4;
 width: 50%;border-radius: 2px;transform: translateX(0);transition: all 1s}
 section.skills.offset .progress{
   transform: translateX(-100%);
@@ -90,7 +89,6 @@ section.message > ol{
   margin:0 auto;
   background: #F4F4F4;
   border-top:1px solid #DDD;
-
 }
 section.message >ol>li{
   padding: 16px;
